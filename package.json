@@ -1,0 +1,27 @@
+{
+  "name": "tailwind-retro-colors",
+  "version": "1.0.0-rc0",
+  "license": "MIT",
+  "author": "Jack Bister",
+  "filename": "tailwind-retro-colors.js",
+  "description": "Retro color palettes for TailwindCSS",
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "color",
+    "colors",
+    "palette"
+  ],
+  "files": [
+    "tailwind-retro-colors.js"
+  ],
+  "main": "tailwind-retro-colors.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackbister/tailwind-retro-colors.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jackbister/tailwind-retro-colors/issues"
+  },
+  "homepage": "https://jackbister.github.io/tailwind-retro-colors/"
+}

@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "build": "cross-env NODE_ENV=production tailwindcss build style.css -o dist.css && webpack -p",
+    "start": "webpack-dev-server -d --content-base . --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "7.0.2",
+    "ts-loader": "8.0.2",
+    "typescript": "3.9.7",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "0.2.0",
+    "tailwindcss": "1.7.3"
+  }
+}
