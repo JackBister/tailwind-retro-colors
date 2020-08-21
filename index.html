@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>tailwind-retro-colors</title>
+
+    <link rel="stylesheet" href="./dist.css" />
+
+    <style>
+      .name-text {
+        background: inherit;
+        background-clip: text;
+        color: transparent;
+        filter: grayscale(1) invert(1) contrast(9);
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <div class="container mx-auto mt-4 prose max-w-2xl">
+      <h1 class="flex flex-row items-center justify-between">
+        <span>
+          tailwind-retro-colors
+        </span>
+        <a href="https://github.com/jackbister/tailwind-retro-colors">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+            />
+          </svg>
+        </a>
+      </h1>
+      <p>
+        Have you ever wished that you could use a modern utility CSS framework
+        while simultaneously having your color palette constrained by hardware
+        that's several decades old? tailwind-retro-colors has you covered.
+      </p>
+      <p>
+        tailwind-retro-colors replaces the default Tailwind color scheme with a
+        limited set of colors based on retro hardware capabilities.
+      </p>
+      <h2>
+        Installing
+      </h2>
+      <ol>
+        <li>
+          Install the NPM package:
+          <pre><code>npm install --save tailwind-retro-colors</code></pre>
+        </li>
+        <li>
+          Replace the color palette in your Tailwind config with your desired
+          palette:
+          <pre><code>// tailwind.config.js
+const { nes } = require("tailwind-retro-colors");
+
+module.exports = {
+  theme: {
+    colors: nes,
+  },
+};</code></pre>
+        </li>
+        <li>
+          Start using your retro colors!
+          <pre><code>&lt;div class="bg-blue-600 text-gray-100 text-center"&gt;Hello NES!&lt;/div&gt;</code></pre>
+          <div class="bg-blue-600 text-gray-100 text-center">
+            Hello NES!
+          </div>
+        </li>
+      </ol>
+      <h2>Available palettes</h2>
+      <div
+        class="flex flex-row justify-evenly text-gray-100 bg-cyan-300 rounded-md"
+      >
+        <button
+          id="nesButton"
+          class="px-6 py-2"
+          onclick="selectPalette('nes'); scrollToTable();"
+        >
+          nes
+        </button>
+        <button
+          id="gbButton"
+          class="px-6 py-2"
+          onclick="selectPalette('gb'); scrollToTable();"
+        >
+          gb
+        </button>
+        <button
+          id="c64Button"
+          class="px-6 py-2"
+          onclick="selectPalette('c64'); scrollToTable();"
+        >
+          c64
+        </button>
+        <button
+          id="a2Button"
+          class="px-6 py-2"
+          onclick="selectPalette('a2'); scrollToTable();"
+        >
+          a2
+        </button>
+      </div>
+    </div>
+    <div class="container mx-auto mb-8">
+      <div class="mt-8 flex flex-row justify-center">
+        <noscript
+          >Please enable JavaScript on this page to preview the colors in the
+          palette.</noscript
+        >
+        <div id="paletteTable" style="min-height: 506px;"></div>
+      </div>
+    </div>
+    <script src="./app.js" async></script>
+  </body>
+</html>
