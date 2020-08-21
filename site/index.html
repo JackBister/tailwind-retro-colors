@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="tailwind-retro-colors is an NPM package that can be used to override the default colors in TailwindCSS with color schemes based on retro hardware capabilities."
+    />
+
     <title>tailwind-retro-colors</title>
 
     <link rel="stylesheet" href="./dist.css" />
@@ -9,18 +15,22 @@
       .name-text {
         background: inherit;
         background-clip: text;
+        -webkit-background-clip: text;
         color: transparent;
         filter: grayscale(1) invert(1) contrast(9);
       }
     </style>
   </head>
   <body class="antialiased">
-    <div class="container mx-auto mt-4 prose max-w-2xl">
+    <div class="container mx-auto mt-4 px-2 prose max-w-2xl">
       <h1 class="flex flex-row items-center justify-between">
         <span>
           tailwind-retro-colors
         </span>
-        <a href="https://github.com/jackbister/tailwind-retro-colors">
+        <a
+          href="https://github.com/jackbister/tailwind-retro-colors"
+          aria-label="Link to the tailwind-retro-colors repository on GitHub"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -73,7 +83,7 @@ module.exports = {
       </ol>
       <h2>Available palettes</h2>
       <div
-        class="flex flex-row justify-evenly text-gray-100 bg-cyan-600 rounded-md"
+        class="flex flex-row justify-evenly text-gray-100 bg-blue-800 rounded-md"
       >
         <button
           id="nesButton"
@@ -106,12 +116,12 @@ module.exports = {
       </div>
     </div>
     <div class="container mx-auto mb-8">
-      <div class="mt-8 flex flex-row justify-center">
+      <div class="mt-8 flex flex-row justify-center overflow-auto w-full">
         <noscript
           >Please enable JavaScript on this page to preview the colors in the
           palette.</noscript
         >
-        <div id="paletteTable" style="min-height: 506px;"></div>
+        <div id="paletteTable" style="min-height: 506px; min-width: 0;"></div>
       </div>
     </div>
     <script src="./app.js" async></script>
