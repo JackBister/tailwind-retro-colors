@@ -1851,10 +1851,16 @@ video {
   background-color: rgba(0, 0, 252, var(--bg-opacity));
 }
 
-.bg-cyan-300 {
+.bg-cyan-600 {
   --bg-opacity: 1;
-  background-color: #58f898;
-  background-color: rgba(88, 248, 152, var(--bg-opacity));
+  background-color: #008888;
+  background-color: rgba(0, 136, 136, var(--bg-opacity));
+}
+
+.bg-violet-400 {
+  --bg-opacity: 1;
+  background-color: #4428bc;
+  background-color: rgba(68, 40, 188, var(--bg-opacity));
 }
 
 .rounded-md {
@@ -1863,6 +1869,10 @@ video {
 
 .flex {
   display: flex;
+}
+
+.table {
+  display: table;
 }
 
 .flex-row {
@@ -1904,6 +1914,10 @@ video {
 
 .max-w-2xl {
   max-width: 42rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .py-2 {
